@@ -1,0 +1,30 @@
+.button {
+  @include font_character($default_font_size, $default_line_height, $main_white);
+
+  min-height: 48px;
+  margin: 0 0 5px 5px;
+  padding: 13px 38px;
+
+  background-color: $active_blue;
+  border: none;
+  border-radius: 80px;
+
+  @include for_mobile {
+    margin: 0 5px 5px;
+  }
+
+  @include only_desktop {
+    transition-duration: 100ms;
+
+    &:hover,
+    &:focus {
+      background-color: $active_dark_blue;
+      outline: none;
+    }
+
+    &:active {
+      color: $main_grey;
+      background-color: $main_grey_light;
+    }
+  }
+}

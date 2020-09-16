@@ -1,0 +1,90 @@
+.pickup__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  &--address-list {
+    margin: 0 0 18px;
+
+    label {
+      position: relative;
+
+      width: 50%;
+      margin: 0 0 10px 0;
+      padding: 0 24px;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      @include for_mobile {
+        width: 100%;
+      }
+    }
+
+    label::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+
+      width: 16px;
+      height: 16px;
+      padding: 5px;
+
+      border: $active_border;
+      border-radius: 50%;
+    }
+
+    @include only_desktop {
+      input:not(:checked) + label:hover,
+      input:focus + label {
+        color: $active_blue;
+      }
+
+      input:checked + label {
+        color: $active_dark_blue;
+      }
+    }
+
+    input:checked + label::before {
+      background-color: $main_black;
+      background-clip: content-box;
+    }
+  }
+
+  &--map {
+    margin: 0 0 39px;
+  }
+
+  &--button {
+    justify-content: flex-end;
+    align-items: stretch;
+
+    @include for_mobile {
+      justify-content: center;
+    }
+  }
+}
+
+.pickup__form {
+  fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+}
+
+.pickup__map {
+  width: 100%;
+  min-height: 560px;
+
+  @include for_tablet {
+    * {
+      touch-action: auto;
+    }
+  }
+}

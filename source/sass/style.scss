@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "roboto-regular";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: local("Roboto Regular"), local("Roboto-Regular"), local("roboto regular"), local("roboto-regular"), url("../fonts/roboto-regular.woff2") format("woff2"), url("../fonts/roboto-regular.woff") format("woff");
+}
+
+@import "variables";
+@import "mixins";
+@import "base";
+@import "blocks/inner";
+@import "blocks/instruction";
+@import "blocks/tabs";
+@import "blocks/button";
+@import "blocks/carrier";
+@import "blocks/delivery";
+@import "blocks/pickup";

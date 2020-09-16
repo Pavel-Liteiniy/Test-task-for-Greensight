@@ -1,0 +1,59 @@
+// расширения
+@mixin for_mobile {
+  @media (max-width: $breakpoint_tablet - 1) {
+    @content;
+  }
+}
+
+@mixin for_tablet {
+  @media (max-width: $breakpoint_desktop - 1) {
+    @content;
+  }
+}
+
+// только для настольной версии
+@mixin only_desktop {
+  @media (min-width: $breakpoint_desktop) {
+    @content;
+  }
+}
+
+@mixin for_retina {
+  @media (min-resolution: $retina_dppx), (min-resolution: $retina_dpi) {
+    @content;
+  }
+}
+
+// базовые характеристики текста
+@mixin font_character($size, $height, $color) {
+  font-size: $size;
+  line-height: $height;
+  color: $color;
+}
+
+// сброс оформления списка поумолчанию
+@mixin list_default_remove {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+// сброс оформления по умолчанию у ссылки <a>
+@mixin link_default_remove {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+// сброс внешних и внутренних отступов
+@mixin streak_default_remove {
+  margin: 0;
+  padding: 0;
+}
+
+// сброс оформления по умолчанию у кнопки <button>
+@mixin button_default_remove {
+  padding: 0;
+  border: none;
+  background: none;
+}

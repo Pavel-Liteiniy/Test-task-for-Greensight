@@ -1,0 +1,123 @@
+.delivery__wrappper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  flex-grow: 1;
+  flex-shrink: 1;
+
+  padding: 0 0 36px;
+
+  @include for_mobile {
+    padding: 0 0 20px;
+  }
+
+  &--contacts {
+    flex-direction: row;
+
+    padding: 0;
+
+    @include for_mobile {
+      flex-direction: column;
+    }
+  }
+
+  &--contact-name {
+    @include for_mobile {
+      margin: 0;
+    }
+  }
+
+  &--button {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: stretch;
+
+    @include for_mobile {
+      justify-content: center;
+    }
+
+    @include only_desktop {
+      padding: 3px 0 0;
+    }
+  }
+
+  label {
+    padding: 0 0 12px;
+  }
+
+  input {
+    min-height: 48px;
+    padding: 10px 54px 10px 15px;
+
+    &:focus,
+    &:hover {
+      border: $active_border;
+      outline: none;
+    }
+  }
+
+  textarea {
+    min-height: 112px;
+    padding: 10px 15px;
+
+    resize: none;
+
+    &:focus,
+    &:hover {
+      border: $active_border;
+      outline: none;
+    }
+  }
+}
+
+.delivery__wrappper > .delivery__wrappper {
+  width: 50%;
+
+  &:nth-child(2n) {
+    padding-left: 12px;
+  }
+
+  &:nth-child(2n+1) {
+    padding-right: 12px;
+  }
+
+  @include for_mobile {
+    width: 100%;
+
+    &:nth-child(2n) {
+      padding-left: 0;
+    }
+
+    &:nth-child(2n+1) {
+      padding-right: 0;
+    }
+  }
+}
+
+.delivery__alert {
+  @include font_character($small_font_size, $small_line_height, $active_red);
+
+  padding: 4px 0 0;
+  margin: 0;
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    right: 17px;
+    top: -35px;
+
+    content: "";
+
+    width: 22px;
+    height: 22px;
+
+    background-image: url("../img/icon-alert.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+}

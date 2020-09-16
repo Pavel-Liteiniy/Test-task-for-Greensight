@@ -1,0 +1,25 @@
+$font_family_roboto: "roboto-regular", "arial", sans-serif;
+
+$header_font_size: 32px;
+$header_line_height: 40px;
+$default_font_size: 16px;
+$default_line_height: 24px;
+$small_font_size: 12px;
+$small_line_height: 16px;
+
+$main_black: #222222;
+$main_grey: #999999;
+$main_grey_light: #edeeef;
+$main_white: #ffffff;
+$active_blue: #215bf0;
+$active_dark_blue: #0f41c4;
+$active_red: #f12828;
+$background_grey: #f6f6f6;
+
+$main_border: 1px solid $main_grey;
+$active_border: 1px solid $main_black;
+$tab_border: 1px solid $active_blue;
+
+$breakpoint_mobile: 320px;
+$breakpoint_tablet: 768px;
+$breakpoint_desktop: 1200px;

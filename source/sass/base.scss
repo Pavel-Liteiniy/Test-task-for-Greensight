@@ -1,0 +1,42 @@
+.visually_hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  @include streak_default_remove;
+
+  font-family: $font_family_roboto;
+}
+
+main {
+  min-height: 100vh;
+  min-width: $breakpoint_mobile;
+
+  padding: 0 0 104px;
+
+  @include for_tablet {
+    padding: 0 0 52px;
+  }
+
+  background-color: $background_grey;
+}
+
+a,
+button,
+label,
+select {
+  cursor: pointer;
+}

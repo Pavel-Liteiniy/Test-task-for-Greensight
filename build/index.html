@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Волшебный магазин</title>
+  <link rel="stylesheet" href="css/vendor/vendor.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <main>
+    <h1 class="visually_hidden">Оформление заказа</h1>
+    <section class="instruction">
+      <div class="instruction__inner inner">
+        <p class="instruction__content">
+          Выберите способ доставки
+        </p>
+      </div>
+    </section>
+    <section class="tabs">
+      <div class="tabs__inner inner">
+        <input class="visually_hidden" type="radio" name="tab" value="delivery" id="tab-delivery" checked="">
+        <label for="tab-delivery" class="tabs__button tabs__button--delivery">Доставка</label>
+        <input class="visually_hidden" type="radio" name="tab" value="pickup" id="tab-pickup">
+        <label for="tab-pickup" class="tabs__button tabs__button--pickup">Самовывоз</label>
+      </div>
+    </section>
+    <section class="carrier">
+      <div class="carrier__inner inner">
+        <div class="carrier__delivery delivery">
+          <form action="https://echo.htmlacademy.ru" method="post" class="delivery__form" autocomplete="off">
+            <div class="delivery__wrappper delivery__wrappper--contacts">
+              <div class="delivery__wrappper delivery__wrappper--contact-name">
+                <label for="contact-name">ФИО</label>
+                <input type="text" name="contact-name" id="contact-name" placeholder="Только кириллица" required="" autofocus="">
+              </div>
+              <div class="delivery__wrappper delivery__wrappper--phone-number">
+                <label for="phone-number">Телефон</label>
+                <input type="tel" name="phone-number" id="phone-number" placeholder="+7 (___) ___-__-__" required="">
+              </div>
+            </div>
+            <div class="delivery__wrappper delivery__wrappper--ship-to-address">
+              <label for="ship-to-address">Адрес доставки</label>
+              <input type="text" name="ship-to-address" id="ship-to-address" placeholder="Город, улица, дом" required="">
+            </div>
+            <div class="delivery__wrappper delivery__wrappper--comment">
+              <label for="comment">Комментарий</label>
+              <textarea name="comment" id="comment" rows="3" required=""></textarea>
+            </div>
+            <div class="delivery__wrappper delivery__wrappper--button">
+              <button class="delivery__button button" type="submit">Оформить заказ</button>
+            </div>
+          </form>
+        </div>
+        <div class="carrier__pickup pickup">
+          <form action="https://echo.htmlacademy.ru" method="POST" class="pickup__form">
+            <fieldset>
+              <legend class="visually_hidden">Доступные пункты выдачи заказов</legend>
+              <div class="pickup__wrapper pickup__wrapper--address-list">
+              </div>
+            </fieldset>
+            <div class="pickup__wrapper pickup__wrapper pickup__wrapper--map">
+              <div class="pickup__map map" id="map"></div>
+            </div>
+            <div class="pickup__wrapper pickup__wrapper--button">
+              <button class="pickup__button button" type="submit">Оформить заказ</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=a2f4cd26-9f9b-47df-93fe-5e41e97128e1&lang=ru_RU"></script>
+  <script src="js/script.min.js"></script>
+</body>
+</html>

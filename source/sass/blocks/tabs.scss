@@ -1,0 +1,44 @@
+.tabs__inner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  input:checked + .tabs__button {
+    color: $active_blue;
+
+    background-color: $main_white;
+  }
+}
+
+.tabs__button {
+  @include font_character($default_font_size, $default_line_height, $main_grey);
+
+  padding: 12px 40px;
+
+  background-color: $main_grey_light;
+  border: none;
+  border-radius: 5px 5px 0 0;
+
+  &:not(:last-child) {
+    margin: 0 7px 0 0;
+  }
+
+  &--pickup {
+    padding: 12px 37px;
+  }
+
+  @include for_tablet {
+    padding: 12px 20px;
+  }
+
+  @include only_desktop {
+    &:hover,
+    &:focus {
+      color: $active_dark_blue;
+
+      outline: none;
+    }
+  }
+}

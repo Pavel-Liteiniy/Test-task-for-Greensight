@@ -1,0 +1,29 @@
+.carrier__inner {
+  margin: 0 auto;
+  padding: 44px 40px 43px;
+
+  background-color: $main_white;
+  border-radius: 0 0 5px 5px;
+
+  @include for_mobile {
+    padding: 22px 20px 24px;
+  }
+
+  label {
+    @include font_character($small_font_size, $small_line_height, $main_black);
+  }
+
+  input,
+  textarea {
+    @include font_character($default_font_size, $default_line_height, $main_black);
+
+    border: $main_border;
+    border-radius: 4px;
+  }
+}
+
+.carrier__pickup {
+  label {
+    @include font_character($default_font_size, $default_line_height, $main_black);
+  }
+}

@@ -1,0 +1,14 @@
+.instruction__content {
+  @include streak_default_remove;
+  @include font_character($header_font_size, $header_line_height, $main_black);
+
+  padding: 72px 0 48px;
+
+  @include for_tablet {
+    padding: 48px 0 32px;
+  }
+
+  @include for_mobile {
+    padding: 24px 10px 16px;
+  }
+}

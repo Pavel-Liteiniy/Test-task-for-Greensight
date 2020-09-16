@@ -1,0 +1,13 @@
+.inner {
+  max-width: 1032px;
+  margin: 0 auto;
+
+  @include for_tablet {
+    max-width: 100%;
+    padding: 0 44px;
+  }
+
+  @include for_mobile {
+    padding: 0;
+  }
+}
