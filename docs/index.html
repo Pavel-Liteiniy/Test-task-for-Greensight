@@ -22,7 +22,7 @@
     </section>
     <section class="tabs">
       <div class="tabs__inner inner">
-        <input class="visually_hidden" type="radio" name="tab" value="delivery" id="tab-delivery" checked>
+        <input class="visually_hidden" type="radio" name="tab" value="delivery" id="tab-delivery" checked="">
         <label for="tab-delivery" class="tabs__button tabs__button--delivery">Доставка</label>
         <input class="visually_hidden" type="radio" name="tab" value="pickup" id="tab-pickup">
         <label for="tab-pickup" class="tabs__button tabs__button--pickup">Самовывоз</label>
@@ -35,20 +35,20 @@
             <div class="delivery__wrappper delivery__wrappper--contacts">
               <div class="delivery__wrappper delivery__wrappper--contact-name">
                 <label for="contact-name">ФИО</label>
-                <input type="text" name="contact-name" id="contact-name" placeholder="Только кириллица" required autofocus>
+                <input type="text" name="contact-name" id="contact-name" placeholder="Только кириллица" required="" autofocus="">
               </div>
               <div class="delivery__wrappper delivery__wrappper--phone-number">
                 <label for="phone-number">Телефон</label>
-                <input type="tel" name="phone-number" id="phone-number" placeholder="+7 (___) ___-__-__" required>
+                <input type="tel" name="phone-number" id="phone-number" placeholder="+7 (___) ___-__-__" required="">
               </div>
             </div>
             <div class="delivery__wrappper delivery__wrappper--ship-to-address">
               <label for="ship-to-address">Адрес доставки</label>
-              <input type="text" name="ship-to-address" id="ship-to-address" placeholder="Город, улица, дом" required>
+              <input type="text" name="ship-to-address" id="ship-to-address" placeholder="Город, улица, дом" required="">
             </div>
             <div class="delivery__wrappper delivery__wrappper--comment">
               <label for="comment">Комментарий</label>
-              <textarea name="comment" id="comment" rows="3" required></textarea>
+              <textarea name="comment" id="comment" rows="3" required=""></textarea>
             </div>
             <div class="delivery__wrappper delivery__wrappper--button">
               <button class="delivery__button button" type="submit">Оформить заказ</button>

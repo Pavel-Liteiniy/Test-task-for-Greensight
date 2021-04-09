@@ -23,11 +23,11 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
-    "build": "gulp build",
-    "start": "gulp start",
-    "sprite": "gulp sprite",
-    "images": "gulp images",
-    "webp": "gulp webp"
+    "build": "npx gulp docs",
+    "start": "npx gulp start",
+    "sprite": "npx gulp sprite",
+    "images": "npx gulp images",
+    "webp": "npx gulp webp"
   },
   "browserslist": [
     "last 2 versions",
